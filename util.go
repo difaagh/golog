@@ -85,7 +85,7 @@ func openFile(fileName, filePath string) (*os.File, error) {
 
 	err = createIfNotExist(src)
 	if err != nil {
-		return nil, fmt.Errorf("file.IsNotExistMkDir src: %s, err: %v", src, err)
+		return nil, fmt.Errorf("file is not exist src: %s, err: %v", src, err)
 	}
 
 	f, err := open(src+"/"+fileName, os.O_APPEND|os.O_CREATE|os.O_RDWR, 0644)

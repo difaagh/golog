@@ -73,7 +73,6 @@ func Fatal(v ...interface{}) {
 }
 
 func setPrefix(level Level) {
-	fmt.Println(filepath.Base)
 	_, file, line, ok := runtime.Caller(defaultCallerDepth)
 	if ok {
 		logPrefix = fmt.Sprintf("[%s][%s:%d]", levelFlags[level], filepath.Base(file), line)
